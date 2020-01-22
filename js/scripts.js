@@ -10,6 +10,33 @@ var factorial = function(number) {
   }
 };
 
+var palindromeCheck = function(string) {
+  var characters = string.split("");
+  //console.log(characters);
+
+  //eliminate special chars
+  var re = /[a-z0-9]/i;
+  var alphanumericChars = [];
+  
+  for (var i = 0; i < characters.length; i ++) {
+    if (characters[i].match(re)) {
+      //console.log(characters[i]);
+      alphanumericChars.push(characters[i]);
+    }
+  }
+
+  var newStr = alphanumericChars.join("");
+  var reversed = alphanumericChars.reverse().join("");
+
+  if (newStr === reversed){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
 
 
 $(document).ready(function() {
@@ -70,6 +97,13 @@ $(document).ready(function() {
     var number = parseInt($("#factorialNumber").val());
     
     $("#factorialOutput").text(factorial(number));
+  })
+
+  $("#palindromeForm").submit(function(event) {
+    event.preventDefault();
+    var userInput = $("#palindromeInput").val();
+    
+    $("#palindromeOutput").text(palindromeCheck(userInput));
   })
 
 
