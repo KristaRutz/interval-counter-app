@@ -31,4 +31,25 @@ $(document).ready(function() {
       }   
     }
   });
+
+  $("#myForm").submit(function(event) {
+    event.preventDefault();
+
+    var sentence = $("#sentence").val().split("");
+    console.log(sentence);
+    var chars = [];
+
+    for (var i = 0; i < sentence.length; i++) {
+      if (sentence[i] === "a" || sentence[i] === "A" || sentence[i] === "e" || sentence[i] === "E" || sentence[i] === "i" || sentence[i] === "I" || sentence[i] === "o" || sentence[i] === "O" || sentence[i] === "u" || sentence[i] === "U") {
+        chars.push("-");
+      } else {
+        chars.push(sentence[i]);
+      }
+    } 
+    
+    $("#puzzleOutput").text(chars.join(""));
+
+  });
+
+
 })
