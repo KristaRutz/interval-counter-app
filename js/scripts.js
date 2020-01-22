@@ -40,6 +40,8 @@ var palindromeCheck = function(string) {
 
 
 $(document).ready(function() {
+
+  // Count up!
   $("#numberInputs").submit(function(event) {
     event.preventDefault();
 
@@ -73,6 +75,8 @@ $(document).ready(function() {
     }
   });
 
+
+  // Word Puzzle
   $("#myForm").submit(function(event) {
     event.preventDefault();
 
@@ -80,8 +84,10 @@ $(document).ready(function() {
     console.log(sentence);
     var chars = [];
 
+    var vowels = /[aeiou]/i;
+
     for (var i = 0; i < sentence.length; i++) {
-      if (sentence[i] === "a" || sentence[i] === "A" || sentence[i] === "e" || sentence[i] === "E" || sentence[i] === "i" || sentence[i] === "I" || sentence[i] === "o" || sentence[i] === "O" || sentence[i] === "u" || sentence[i] === "U") {
+      if (sentence[i].match(vowels)) {
         chars.push("-");
       } else {
         chars.push(sentence[i]);
@@ -92,6 +98,7 @@ $(document).ready(function() {
   });
 
 
+  // Factorial
   $("#factorialForm").submit(function(event) {
     event.preventDefault();
     var number = parseInt($("#factorialNumber").val());
@@ -99,6 +106,8 @@ $(document).ready(function() {
     $("#factorialOutput").text(factorial(number));
   })
 
+
+  // Palindrome Checker
   $("#palindromeForm").submit(function(event) {
     event.preventDefault();
     var userInput = $("#palindromeInput").val();
