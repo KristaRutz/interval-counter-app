@@ -1,3 +1,17 @@
+var factorial = function(number) {
+  if (number === 0 || number === 1) {
+    return 1;
+  } else if (number > 0) {
+    var factorialSum = number;
+    for (var i = number; i > 1; i--) {
+      factorialSum = factorialSum * (i - 1);
+    }
+    return factorialSum;
+  }
+};
+
+
+
 $(document).ready(function() {
   $("#numberInputs").submit(function(event) {
     event.preventDefault();
@@ -48,8 +62,15 @@ $(document).ready(function() {
     } 
     
     $("#puzzleOutput").text(chars.join(""));
-
   });
+
+
+  $("#factorialForm").submit(function(event) {
+    event.preventDefault();
+    var number = parseInt($("#factorialNumber").val());
+    
+    $("#factorialOutput").text(factorial(number));
+  })
 
 
 })
