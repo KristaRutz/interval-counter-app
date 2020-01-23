@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Count Up in Multiples</title>
   </head>
   <body>
-    <h1>Count Up!</h1>
-    <form id="numberInputs">
-      <label for="countTo">I want to count to:</label>
-      <input id="countTo" type="number">
-      <label for="countBy">I want to count by:</label>
-      <input id="countBy" type="number">
-      <button type="submit">Enter</button>
-    </form>
-    <div id="output"></div>
+    <div class="container">
+      <h1>Count Up!</h1>
+      <form id="numberInputs">
+        <label for="countTo">I want to count to:</label>
+        <input id="countTo" type="number">
+        <label for="countBy">I want to count by:</label>
+        <input id="countBy" type="number">
+        <button type="submit">Enter</button>
+      </form>
+      <div id="output"></div>
 
-    <h1>Word Puzzle</h1>
-    <form id="myForm">
-      <label for="sentence">Enter a sentence:</label>
-      <input id="sentence" type="text">
+      <h1>Word Puzzle</h1>
+      <form id="myForm">
+        <label for="sentence">Enter a sentence:</label>
+        <input id="sentence" type="text">
 
-      <button type="submit">Submit!</button>
-    </form>
-    <div id="puzzleOutput"></div>
+        <button type="submit">Submit!</button>
+      </form>
+      <div id="puzzleOutput"></div>
 
-    <h1>Factorial</h1>
-    <form id="factorialForm">
-      <label for="factorialNumber">Enter a number:</label>
-      <input id="factorialNumber" type="number">
+      <h1>Factorial</h1>
+      <form id="factorialForm">
+        <label for="factorialNumber">Enter a number:</label>
+        <input id="factorialNumber" type="number">
 
-      <button type="submit">Compute me in factorial!</button>
-    </form>
-    <div id="factorialOutput"></div>
+        <button type="submit">Compute me in factorial!</button>
+      </form>
+      <div id="factorialOutput"></div>
 
-    <h1>Palindrome Checker</h1>
-    <form id="palindromeForm">
-      <label for="palindromeInput">Enter a word or phrase:</label>
-      <input id="palindromeInput" type="text">
+      <h1>Palindrome Checker</h1>
+      <form id="palindromeForm">
+        <label for="palindromeInput">Enter a word or phrase:</label>
+        <input id="palindromeInput" type="text">
+        <button type="submit">Compute whether this is a palindrome!</button>
+      </form>
+      <div id="palindromeOutput"></div>
 
-      <button type="submit">Compute whether this is a palindrome!</button>
-    </form>
-    <div id="palindromeOutput"></div>
-
+      <h1>Prime Sifting</h1>
+      <form id="primeForm">
+        <label for="primeInput">Enter a number limit</label>
+        <input id="primeInput" type="number">
+        <button type="submit">Compute all primes leading up to my number!</button>
+      </form>
+      <div id="primeOutput"></div>
+    </div>
   </body>
 </html>
